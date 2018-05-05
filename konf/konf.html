@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet"  href="styles4.css">
+    <!--<link rel="stylesheet" media="screen and (max-width: 880px)" href="mstyles.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
+
+    <!-- tablesorter -->
+    
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="jquery.tablesorter.js"></script> 
+    <title>Flash Store</title>
+  </head>
+  <body>
+ 
+  <div class="container-fluid">
+    <div class='wrapper'>
+  <div class="row"> 
+  <nav id="top"><span>Позвънете сега FLASH PC &nbsp;<i class="fas fa-headphones fa-2x"></i></span>
+  <span> Вход</span>
+   </nav>
+   </div>
+ <!--  <img src="g3.png" alt="gear"/> -->
+   <header>
+   <div class="row metalic">
+   <div class="col-md-8"> 
+     
+      <img src="../robot.png" alt="robot" />
+       <span id="title1" hidden><img src="../metal-text.jpg" alt="bs"/> </span> 
+       
+    </div>
+    <div class="col-md-4">
+      <input type="text" placeholder="Search">
+       
+</div>
+</div>
+</header>
+
+<div id="menu" class="row">
+<ul> 
+<a href="../katalog/katalog.html"><li> </li> </a>
+<a href="konf.html"><li> </li> </a>
+<a href="../serviz/serviz.html"><li> </li></a>
+<a href="../kontakti/kontakti.html"><li></li></a>
+
+
+</ul>
+ 
+ </div>
+ <div id="konf" class="row">
+ <form  onsubmit="results(); return false;"> 
+<div class="form-group">
+
+   <span>Избери сокет:</span>
+
+ <select id='select1' class="selectpicker form-control" onclick="platform();">
+  <option value="amd">AMD</option>
+  <option value="intel">Intel</option>
+  
+</select> 
+<span> Процесор</span>
+<select class='am4 selectpicker form-control' id='select2'>
+  
+  <option class ="amd1" value='{"brand":"AMD Ryzen 3 1200 AM4 BOX", "price":200}'>AMD Ryzen 3 1200 AM4 BOX1</option>
+  <option class="amd1" value='{"brand":"AMD Ryzen 5 1400 AM4 BOX", "price":400}'>AMD Ryzen 5 1400 AM4 BOX2</option>
+  <option class="intel" value='{"brand":" Intel® i5-8500 6X6 CORES", "price":"420"}'> Intel® i5-8500 6X6 CORES/</option>
+   <option class="intel" value='{"brand":" Intel G4560 3.5 GHz ", "price":"113"}'> Intel G4560 3.5 GHz </option>
+</select> 
+  <span> Дъно</span>
+<select class='am4 selectpicker form-control' id="select3">
+  
+  <option  class="amd1" value='{"brand": "ASROCK A320M HDV", "price": 120}'>ASROCK A320M HDV s.AM4 HDMI</option>
+  <option  class="amd1" value='{"brand": "ASROCK A320M Pro4", "price": 150}'>ASROCK A320M Pro4 s.AM4</option>
+ <option  class="intel" value='{"brand": "ASROCK B360 GAMING K4 ", "price": 170}'>ASROCK B360 GAMING K4 </option>
+  <option  class="intel" value='{"brand": "MSI B360 GAMING PLUS", "price": 230}'>MSI B360 GAMING PLUS</option>
+  
+</select> 
+
+<span> РАМ памет</span>
+<select id="select4" class="selectpicker form-control">
+  
+  <option value='{"brand": "RAM 4GB DDR4 2400MHz KINGSTON", "price":160}'>RAM 4GB DDR4 2400MHz KINGSTON - 5 год.гаранция</option>
+  
+  <option value='{"brand": "RAM 4GB DDR4 2400 ADATA", "price": 140}'>RAM 4GB DDR4 2400 ADATA - 5 год.гаранция</option>
+  
+</select> 
+
+<span>Твърд диск (HDD) или (SSD)</span>
+<select class="selectpicker form-control" id="select5">
+  
+  
+  <option value='{"brand": "SSD ADATA SU800 128GB", "price":80}'>SSD ADATA SU800 128GB 3D NAND 2.5''</option>
+  <option value='{"brand": "WD 1TB RED SATA III 64 MB 3.5", "price":90}'>WD 1TB RED SATA III 64 MB 3.5''</option>
+  
+</select> 
+
+ <span>Кутия</span>
+<select  class="selectpicker form-control" id="select6">
+  
+  <option value='{"brand": "Segotep", "price":30}'>Segotep Chariot TF NoPSU - 24 месеца гаранция</option>
+  <option value='{"brand": "Segotep Polar","price":50}'>Segotep Polar Light Black Case noPSU- 24 месеца гаранция  
+  </option>
+  <option value='{"brand":"Кутия Delux", "price":20}'>Кутия Delux DS410 no PSU - 12 месеца гаранция</option>
+  
+</select> 
+
+<span>Захранване (PSU)</span>
+<select id='select7' class="selectpicker form-control">
+  
+  <option value='{"brand": "Fortron", "price": 100}'>Захранване FORTRON 500W HEXA</option>
+  <option value='{"brand": "RAIDMAX", "price": 150}'>Захранване RAIDMAX RX-535 Th</option>
+  <option value='{"brand":"Zalman", "price": 180}'>Захранване Zalman ZM500-LX 500W </option>
+  
+</select> 
+
+
+<button type="submit" id="btn1" class="btn btn-primary">Submit</button>
+</div>
+</form>
+<div id='generated'> <table class="table table-striped">
+  <thead>
+<tr>
+<th>Компонент</th>
+<th>Цена </th>
+ </tr>
+   </thead>
+   <tbody> 
+<tr> <td>Платформа </td><td id='socket'> </td> </tr>
+<tr> <td id='cpu'></td>
+<td id='price1'></td>
+
+</tr>
+
+<tr> <td id='mb'></td>
+<td id='price2'></td>
+
+
+
+</tr>
+
+<tr> <td id='ram'></td>
+<td id='price3'></td>
+
+</tr>
+
+
+<tr> <td id='hd'></td>
+<td id='price4'></td>
+
+</tr>
+
+
+
+
+<tr> <td id='case'></td>
+<td id='price5'></td>
+
+</tr>
+
+
+<tr> <td id='psu'></td>
+<td id='price6'></td>
+
+</tr>
+
+<tr class="table-dark"> <td id='calculate'><button class=" btn-info" id="btn"> Calculate</button></td>
+<td id="total"> </td>
+
+</tr>
+   </tbody>
+
+</table></div>
+ </div> 
+</div>
+ <footer><span> Desined by Vera G</span></footer>
+</div>
+
+
+
+ 
+ 
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+    <script src="../myjs.js"> 
+    </script>
+<script>
+function results() {
+
+  var select1 = document.getElementById('select1').value; 
+
+var td1 = document.getElementById('socket').innerHTML = select1; 
+
+ var select2 = document.getElementById('select2').value; 
+select2 =JSON.parse(select2);
+var td2 = document.getElementById('cpu').innerHTML =select2.brand; 
+var td1p = document.getElementById('price1').innerHTML = select2.price
+
+  var select3 = document.getElementById('select3').value; 
+
+select3 =JSON.parse(select3);
+var mb = document.getElementById('mb').innerHTML =select3.brand; 
+var mbp = document.getElementById('price2').innerHTML = select3.price
+
+
+ var select4 = document.getElementById('select4').value; 
+select4 =JSON.parse(select4);
+var ram = document.getElementById('ram').innerHTML =select4.brand; 
+var ramp = document.getElementById('price3').innerHTML = select4.price;
+
+ var select5 = document.getElementById('select5').value; 
+select5 =JSON.parse(select5);
+var ram = document.getElementById('hd').innerHTML =select5.brand; 
+var hdp = document.getElementById('price4').innerHTML = select5.price;
+
+
+var select6 = document.getElementById('select6').value; 
+select6 =JSON.parse(select6);
+var case1 = document.getElementById('case').innerHTML =select6.brand; 
+var casep = document.getElementById('price5').innerHTML = select6.price;
+
+
+
+var select7 = document.getElementById('select7').value; 
+select7 =JSON.parse(select7);
+var psu1 = document.getElementById('psu').innerHTML =select7.brand; 
+var psup = document.getElementById('price6').innerHTML = select7.price;
+
+var cal = document.getElementById("calculate").style.visibility = 'visible';
+var total =document.getElementById("total"); 
+var sum = td1p +mbp + ramp + casep + psup +hdp;
+var btn = document.getElementById('btn'); 
+btn.addEventListener("click", function() {
+total.innerHTML = sum;
+
+
+})
+document.querySelector("table").style.visibility = "visible";
+}
+
+function platform() {
+  var select2 = document.getElementById('select2').getElementsByTagName("option");
+ var select1 = document.getElementById('select1').value; 
+ var select3 =document.getElementById("select3");
+var amdd = document.getElementsByClassName("amd1");
+var intell = document.getElementsByClassName("intel");
+
+  if(select1 =="intel")  {
+    for(let i=0; i <=amdd.length; i++) {
+    amdd[i].disabled =true;
+    intell[i].disabled =false;
+ } }
+
+  if(select1 =="amd")  {
+    for(let i=0; i <=amdd.length; i++) {
+    amdd[i].disabled =false;
+    intell[i].disabled =true;
+ } }
+}
+
+
+ </script>
+  
+  </body>
+</html>
